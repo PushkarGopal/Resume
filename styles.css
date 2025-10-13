@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #181c22; /* dark shade */
+  color: #f5f6fa;
+  min-height: 100vh;
+  cursor: none; /* Hide default cursor */
+  transition: background 0.3s;
+}
+header {
+  background: #23272f;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+header nav a:hover {
+  color: #38a169;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+.card {
+  background: #232634;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  max-width: 400px;
+  text-align: center;
+}
+.card:hover {
+  transform: translateY(-7px) scale(1.03);
+  box-shadow: 0 6px 32px rgba(56, 161, 105, 0.19);
+}
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #22242a;
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+/* Custom glowing cursor */
+#cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.9) 55%, rgba(0,255,255,0.25) 90%, transparent 100%);
+  box-shadow: 0 0 16px 10px rgba(0,255,255,0.25);
+  mix-blend-mode: screen;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: background 0.15s, box-shadow 0.15s;
+}
