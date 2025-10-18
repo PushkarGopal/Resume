@@ -3,20 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interactive Background</title>
+  <title>Interactive Resume</title>
   <style>
     body, html {
       margin: 0;
       height: 100%;
       overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
     }
 
+    /* Background effect */
     .interactive-bg {
-      position: relative;
+      position: fixed;
       width: 100%;
-      height: 100vh;
+      height: 100%;
       background-color: #0f172a; /* similar to bg-slate-950 */
       overflow: hidden;
+      z-index: 0;
     }
 
     .interactive-bg::before {
@@ -24,28 +28,144 @@
       position: absolute;
       inset: 0;
       background: radial-gradient(
-        500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-        rgba(41, 171, 226, 0.2),
+        700px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(41, 171, 226, 0.25),
         transparent 40%
       );
       transition: background 0.1s ease;
     }
 
-    .content {
+    /* Resume content */
+    .resume-container {
       position: relative;
       z-index: 1;
-      color: white;
-      font-family: sans-serif;
+      max-width: 800px;
+      margin: 80px auto;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(6px);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .header {
       text-align: center;
-      top: 40%;
-      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #29abe2;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .header p {
+      margin-top: 5px;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    section {
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #29abe2;
+      padding-bottom: 5px;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    
+
+    li {
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #29abe2;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Make page scrollable if content is long */
+    body {
+      overflow-y: auto;
     }
   </style>
 </head>
 <body>
+  <!-- Interactive Background -->
   <div class="interactive-bg"></div>
-  <div class="content">Hello, World!</div>
 
+  <!-- Resume Content -->
+  <div class="resume-container">
+    <div class="header">
+      <h1>Pushkar Gopal</h1>
+      <p><strong>Student of IITGN-JAIST Double Master’s Degree Program | M.tech, India | M.S, Japan</strong></p>
+      <p><a href="mailto:pushkar.gopal@zohomail.in">pushkar.gopal@zohomail.in</a> | +91-8100705705, +81-7031841448 | <a href=https://www.linkedin.com/in/pushkar-gopal>LinkedIn</a> | <a href=https://github.com/PushkarGopal>GitHub</a></p>
+    </div>
+
+    <section>
+      <h2>Profile</h2>
+      <p>
+        <strong><i>“A jack of all trades is a master of none, but oftentimes better than a master of one.”</i></strong></p>
+<p> A motivated learner and a science enthusiast with a passion for coding.
+      </p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <ul style="list-style-type: square;">
+        <li><strong>JAIST, Japan</strong> — M.S. in Materials Science (2025 - 2026) — Pursuing </li>
+        <li><strong>IIT Gandhinagar, India</strong> — M.Tech. in Biological Engineering (2024 - 2026) — CGPA 8.47 </li>
+	<li><strong>Amity University Kolkata, India</strong> — B.Tech. in Biotechnology (2020 - 2024) — CGPA 8.56</li>
+	<li><strong>Holy Cross School, India</strong> —Secondary & Higher Secondary (2018 - 2020) — 95.6% and 91% respectively</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <ol>
+        <li>“Carrier-Enhanced Efficacy and Reduced Toxicity of Imatinib Loaded Green Tea-based 
+Nanocomplex for Cancer Therapy” — JAIST, Japan</li>
+        <li>“Synthesis of Novel Metal-Organic Nanoparticles for Therapeutic and Biomedical 
+Application” — IIT Gandhinagar, India</li>
+	<li>“Digital Marketing Analytics”</strong> — Fincrux Technologies LLP, (Online)</li>
+ 	<li>“Conducting Film-based Ammonia Gas Sensor: Rapid Detection for Ensuring Freshness in 
+Protein Rich Food”— Amity University Kolkata, India</li>
+	<li>“Molecular Cloning and Genotyping of Nitrogen-responsive Genes in Plants”</strong> — BRIC-National Institute of Plant Genome Research (NIPGR), New Delhi, India</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Internships</h2>
+      <ul style="list-style-type: square;">
+        <li><strong>BRIC-National Institute of Plant Genome Research (NIPGR), New Delhi, India</strong> [July - August 2023]</li>
+        <li><strong>Qualissure Laboratory Services, Kolkata, West Bengal, India</strong> [July 2022]</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul style="list-style-type: square;">
+        <li><strong>Spoken Languages:</strong> English, Hindi, Bengali. </li>
+        <li><strong>Programming Languages:</strong> Python, Java </li>
+	<li><strong>Data Analysis and Management Tools:</strong> Jupyter Notebook, MS-Excel, MS-Word, MS-Powerpoint.
+	<li><strong>Pharmaceutically relevant skills:</strong> Development of drug delivery systems, Nanomaterial 
+characterization (DLS, Zetasizer, UV-Spec, SEM, PXRD), In-vitro drug cytotoxicity testing.
+	<li><strong>Biotechnology relevant skills:</strong> Mammalian cell culture, Biochemical Assays, DNA Extraction, Bacterial cell culture techniques, PCR, Cloning, Genotyping, Agarose Gel Electrophoresis, SDS-PAGE, Biosensor development.
+	<li><strong>Soft Skills:</strong> Communication, Teamwork and Collaboration, Critical thinking, Cultural and Emotional Intelligence, Time and Project Management, Leadership, Creativity and Innovation, Networking, Leadership.
+      </ul>
+    </section>
+  </div>
+
+  <!-- Script for interactive effect -->
   <script>
     const container = document.querySelector('.interactive-bg');
 
