@@ -6,11 +6,12 @@
   <title>Resume of Pushkar Gopal</title>
   <style>
     body, html {
-      margin: 0;
-      height: 100%;
-      overflow: hidden;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #fff;
+  margin: 0;
+  min-height: 100%;
+  overflow-y: auto; /* allow vertical scrolling */
+  overflow-x: hidden; /* prevent horizontal scroll */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
     }
 
     /* Background effect */
@@ -114,6 +115,24 @@
     body {
       overflow-y: auto;
     }
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #29abe2;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e8cc4;
+}
   </style>
 </head>
 <body>
@@ -133,13 +152,21 @@
           <a href="https://github.com/PushkarGopal">GitHub</a>
         </p>
       </div>
-      <img src='https://github.com/PushkarGopal/Resume/blob/ecc892a1a590449cc9ef51e62fdf4216ffb18086/pushkar%20photo%20digital%20resume.jpg' alt="Profile Image" class="profile-pic" />
+      <img src="E:\pushkar photo digital resume.jpg" alt="Profile Image" class="profile-pic" />
     </div>
 
     <section>
       <h2>Profile</h2>
       <p><strong><i>“A jack of all trades is a master of none, but oftentimes better than a master of one.”</i></strong></p>
       <p>A motivated learner and a science enthusiast with a passion for coding.</p>
+    </section>
+
+	<section>
+      <h2>Personal Information</h2>
+      <ul style="list-style-type: square;">
+	<li><b>Date of Birth:</b><i> 1<sup>st</sup> March 2002</i></li>
+      <li><b>Permanent Address:</b> "SHANTIKUNJ", 1470, Mallickpur Station Road, Opp. Hospital, Hariharpur, Mallickpur, Kolkata-700145, West Bengal, India.</li>
+	<li><b>Languages:</b> English, Hindi, Bengali.</li>
     </section>
 
     <section>
@@ -188,7 +215,6 @@
     <section>
       <h2>Skills</h2>
       <ul style="list-style-type: square;">
-        <li><strong>Spoken Languages:</strong> English, Hindi, Bengali</li>
         <li><strong>Programming Languages:</strong> Python, Java</li>
         <li><strong>Data Analysis and Management Tools:</strong> Jupyter Notebook, MS-Excel, MS-Word, MS-PowerPoint</li>
         <li><strong>Pharmaceutically relevant skills:</strong> Development of drug delivery systems, Nanomaterial characterization (DLS, Zetasizer, UV-Spec, SEM, PXRD), In-vitro drug cytotoxicity testing</li>
